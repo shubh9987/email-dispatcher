@@ -1,0 +1,12 @@
+runtime:
+  image: golang:1.24-alpine
+
+commands:
+  package: "go mod download"
+  build:
+    - "go build -o email-dispatcher ."
+  start: "./email-dispatcher"
+
+repository:
+  branch: main
+  auto_deploy: true
